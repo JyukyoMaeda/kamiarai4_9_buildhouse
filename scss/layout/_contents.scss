@@ -1,0 +1,321 @@
+.-w1200{
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+}
+.-w1050{
+	width: 100%;
+	max-width: 1050px;
+	margin: auto;
+}
+.-w750{
+	width: 100%;
+	max-width: 750px;
+	margin: auto;
+	padding: 0 15%;
+	@include mq(tb){
+		padding: 0 6%;
+	}
+}
+.-w93-s{
+	@include mq(sp){
+		width: 93% !important;
+		&.is-fixed{
+			width: 94% !important;
+		}
+	}
+}
+
+
+
+.l-contents{
+	display: block;
+	width: 100%;
+	height: auto;
+
+	// ボーダーボックス
+	&.-borderBox{
+		width: 100%;
+		height: auto;
+		border: 1px solid black;
+		padding: 3vh 3vw;
+		align-items: center;
+	}
+	// バナーボックス
+	&.bannerBox{
+		.-bannerBtn{
+			transition: .5s all;
+		}
+		&:hover{
+			.-bannerBtn{
+				color: white !important;
+				background: $red !important;
+			}
+		}
+	}
+
+
+
+
+	&.-img{// 背景画像のみ
+		width: 100%;
+		height: auto;
+	}
+	&.-img-bg{// 背景画像＋コンテンツ
+		position: relative;
+		.imgBox{// 背景画像
+			width: 100%;
+			height: auto;
+			&.-parallax{//パラドックス背景の場合、ここは透明画像
+				justify-content: center;
+				align-items: center;
+
+				background-attachment: fixed;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				&.-parallax_bg01{//ここに背景を指定する。
+					background-image: url(../images/bg/top-content03.jpg);
+				}
+				&.-parallax_bg02{//ここに背景を指定する。
+					background-image: url(../images/bg/build-content01.jpg);
+				}
+			}
+		}
+		.l-contentsBox{// コンテンツ要素
+			width: 100%;
+			position: absolute;
+
+			// TOP > コンセプトエリア > ボタン
+			&.-concept_btn{
+				@include mq(tb){
+					top: 8%;
+					left: 92%;
+					transform: translate(-50%,-50%);
+					width: auto;
+				}
+			}
+			&.-concept_btn02{
+				@include mq(tb){
+					top: 29%;
+					left: 41%;
+					transform: translate(-50%,-50%);
+					width: auto;
+				}
+			}
+			&.-concept_btn03{
+				@include mq(tb){
+					top: 50.5%;
+					left: 92%;
+					transform: translate(-50%,-50%);
+					width: auto;
+				}
+			}
+			&.-concept_btn04{
+				@include mq(tb){
+					top: 71.5%;
+					left: 41%;
+					transform: translate(-50%,-50%);
+					width: auto;
+				}
+			}
+			&.-concept_btn05{
+				@include mq(tb){
+					top: 91.5%;
+					left: 92%;
+					transform: translate(-50%,-50%);
+					width: auto;
+				}
+			}
+
+			//サイト右側中段に表示 （PCのみ）
+			&.-right-topBtn{
+				top: 2.5%;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100%;
+				a{
+					display: block;
+					padding: 8% 23%;
+				}
+			}
+			// サイト下部に表示（SPのみ）
+			&.-right-btmBtn{
+				top: 52.5%;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100%;
+				a{
+					display: block;
+					padding: 8% 23%;
+				}
+			}
+			//サイト下部に表示 （SPのみ）
+			&.-bottom-rightBtn{
+				top: 0%;
+				left: 75%;
+				transform: translateX(-50%);
+				width: 100%;
+				a{
+					display: block;
+					padding: 0% 24%;
+				}
+			}
+			// サイト下部に表示（SPのみ）
+			&.-bottom-leftBtn{
+				top: 0%;
+				left: 25%;
+				transform: translateX(-50%);
+				width: 100%;
+				a{
+					display: block;
+					padding: 0% 24%;
+				}
+			}
+
+
+
+
+			.l-contentsBox--wrapper{
+				width: 100%;
+				height: auto;
+				@include mq(tb){
+					width: 100%;
+					max-width: 1315px;
+					margin: auto;
+				}
+			}
+			&.-topView_text{
+				bottom: 0;
+				left: 0;
+			}
+			&.-kukaku,
+			&.-location-trainBox,
+			&.-builtPlanText,
+			&.-text{
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&.-topBtn{
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100%;
+				a{
+					display: block;
+					padding: 15% 23%;
+				}
+			}
+			&.-btmBtn{
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100%;
+				a{
+					display: block;
+					padding: 8% 23%;
+				}
+			}
+			&.-view-more{
+				color: white;
+				bottom: 5%;
+				right: 0%;
+				// left: 38%;
+				// transform: translate(-50%, -50%);
+				width: 29%;
+				@include mq(tb){
+					width: 10%;
+				}
+				@include mq(pc){
+				}
+			}
+
+			&.-concept-jyusekei{
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%);
+
+				width: auto;
+				@include mq(tb){
+					left: 37%;
+				}
+			}
+			&.-owners-voice{
+				top: 73%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				height: 100%;
+				@include mq(tb){
+					top: 75%;
+				}
+				&--title{
+					top: 5%;
+					left: 50%;
+					transform: translateX(-50%);
+					@include mq(tb){
+						top: 5%;
+					}
+				}
+			}
+
+			&.-bannerBtn__red{
+				background: white;
+				@include mq(tb){
+					top: 67%;
+					left: 67%;
+					transform: translate(-50%, -50%);
+
+					width: 25%;
+					height: auto;
+					padding: 1.2vh .8vw 1vh 3vw;
+					color: $red;
+					border: 1px solid $red;
+					border-radius: 30px;
+				}
+			}
+			&.-bannerBtn__red02{
+				background: white;
+				@include mq(tb){
+					top: 59%;
+					left: 67%;
+					transform: translate(-50%, -50%);
+
+					width: 25%;
+					height: auto;
+					padding: 1.2vh .8vw 1vh 3vw;
+					color: $red;
+					border: 1px solid $red;
+					border-radius: 30px;
+				}
+			}
+
+
+
+		}
+		&.-pc80{
+			width: 80%;
+			margin: auto;
+			@include mq(tb){
+				width: 45%;
+
+			}
+		}
+	}
+	// 基本的にSliderは、「Slick or Swiper」を使用すること
+	// 場所：「Scss/introduction内」
+	&.-slider{
+		//下記スマホ以上
+		@include mq(tb){
+		}
+	}
+	&.-textArea{
+		width: 87%;
+		height: auto;
+		@include mq(tb){
+			width: 100%;
+		}
+	}
+}
+
